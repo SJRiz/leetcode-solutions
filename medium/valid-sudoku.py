@@ -32,3 +32,5 @@ class Solution:
                     square_set[(row // 3, col // 3)].add(board[row][col])
 
         return True
+    
+    # Time complexity is O(n^2). Pretty easy for a leetcode medium
