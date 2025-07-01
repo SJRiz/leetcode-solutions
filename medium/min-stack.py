@@ -38,3 +38,5 @@ class MinStack:
 
     def getMin(self) -> int:
         return self.min_stack[-1]
+    
+    # Solution is O(n) time

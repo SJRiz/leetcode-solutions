@@ -32,3 +32,5 @@ class Solution:
 
         # If the stack is not empty, then its invalid
         return True if not stack else False
+    
+    # Solution is O(n) time.
