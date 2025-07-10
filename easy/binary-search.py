@@ -18,11 +18,11 @@ class Solution(object):
             if nums[m] == target:
                 return m
             
-            # If we overshoot, then we know everything to the right of the current middle (including the current middle) is also an overshoot
+            # If we undershoot, then we know everything to the left of the current middle (including the current middle) is also an undershoot
             elif nums[m] < target:
                 l = m + 1
                 
-            # Likewise if we undershoot
+            # Likewise if we overshoot
             else:
                 r = m - 1
         
