@@ -7,10 +7,15 @@ Given an integer array nums representing the amount of money of each house, retu
 from typing import List
 
 class Solution:
+    # for every ith house, the most money you can get is either cum sum from i-2 + i,
+    # or cum sum from i-1
+    # we only care about the latest 2 subproblems
+    
     def rob(self, nums: List[int]) -> int:
-        rob1, rob2 = 0, 0
+        last = 0            # i-1
+        second_last = 0     # i-2
 
         for n in nums:
-            rob1, rob2 = rob2, max(rob2, rob1 + n)
-
-        return rob2
+            last, second_last = max(second_last + n, last), last
+        
+        return last
